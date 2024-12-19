@@ -19,6 +19,10 @@ class ConfigType(Enum):
 
 @dataclass
 class UserbotConfig:
+	"""
+	This class describes an userbot configuration.
+	"""
+
 	API_ID: int
 	API_HASH: str
 	PHONE: str
@@ -26,11 +30,19 @@ class UserbotConfig:
 
 @dataclass
 class BotConfig:
+	"""
+	This class describes a tg bot configuration.
+	"""
+
 	TOKEN: str
 
 
 @dataclass
 class Config:
+	"""
+	This class describes a configuration.
+	"""
+
 	USERBOT: UserbotConfig
 	BOT: BotConfig
 	LINKS: list = field(default_factory=list)
